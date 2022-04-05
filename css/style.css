@@ -64,6 +64,31 @@ header ul li a {
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid white;
+  font-size:1.6rem;
+}
+
+.picto-app:hover:after, .picto-app:focus:after{
+  content: attr(aria-label);
+  position: absolute;
+  bottom: -1.8em;
+  right: 40px;
+  white-space: nowrap;
+  background: #1b1a17;
+  color: #eff0f0;
+  border-radius: 4px;
+  padding: 5px 5px;
+}
+
+.picto-google:hover:after, .picto-google:focus:after{
+  content: attr(aria-label);
+  position: absolute;
+  bottom: -1.8em;
+  right: 10px;
+  white-space: nowrap;
+  background: #1b1a17;
+  color: #eff0f0;
+  border-radius: 4px;
+  padding: 5px 5px;
 }
 
 i{
@@ -112,6 +137,22 @@ i{
   color: #60757a;
 }
 
+.fa-microphone{
+  color: #4285f4;
+}
+
+.picto-micro:hover:after, .picto-micro:focus:after{
+  content: attr(aria-label);
+  font-size: 11px;
+  bottom: -1.8em;
+  right: 10px;
+  white-space: nowrap;
+  background: #1b1a17;
+  color: #eff0f0;
+  padding: 5px 5px;
+  z-index: 1;
+}
+
 .search{
   width: 100%;
   border: 0;
@@ -158,6 +199,7 @@ i{
 footer {
   background-color: #f2f2f2;
   color: #70757a;
+  font-size: 14px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -169,7 +211,7 @@ footer a{
 }
 
 footer p{
-    padding: 10px 20px;
+    padding: 15px 25px;
 }
 
 .footer-flex{
@@ -196,7 +238,7 @@ hr{
 
 }
 
-.foot-1, .foot-2, .foot-3, .foot-4, .foot-5 {;
+.foot-1, .foot-2, .foot-3, .foot-4, .foot-5 {
   margin: 10px 0;
 }
 
