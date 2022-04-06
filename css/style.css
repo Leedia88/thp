@@ -112,7 +112,7 @@ i{
   color: #3c4043;
 }
 .searchBox {
-  width: 584px;
+  width:300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,13 +171,8 @@ i{
 
 .boutons input {
   margin: 10px;
-  padding: 0 16px;
-  line-height: 27px;
-  height: 36px;
   border:1px solid white;
   background-color: #f8f9fa;
-  font-size: 14px;
-  border-radius: 4px;
   color: #3c4043;
 }
 
@@ -188,13 +183,6 @@ i{
   box-shadow: 0 2px 3px -1px #d6d4d4;
 }
 
-.langue{
-  font-size: small;
-}
-
-.langue a:visited{
-  color: blue;
-}
 
 footer {
   background-color: #f2f2f2;
@@ -210,49 +198,73 @@ footer a{
   padding: 10px 10px;
 }
 
-footer p{
-    padding: 15px 25px;
-}
-
 .footer-flex{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap-reverse;
   padding: 10px 15px;
 }
 
 .footer-flex img {
   display: inline;
-  width: 15px;
-  margin-right: 5px;
+  width: 10px;
 }
 hr{
   border: 0.5px solid #dadce0;
 }
 
-.feuille{
+#box-1, #box-2, #box-3 {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-
+  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
-.foot-1, .foot-2, .foot-3, .foot-4, .foot-5 {
-  margin: 10px 0;
-}
 
-@media screen and (min-width:1200px){
-  .feuille {
-    order: 4;
+@media screen and (width>1200px){
+  .footer-flex{
+    justify-content: flex-start;
+    flex-flow: row wrap;
+  }
+  .box-1{
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  #box-2{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px 0;
   }
 }
 
-.foot-2 {
-  justify-content: center;
+/*
+@media screen and (width<1200px){
+  .footer-flex{
+    justify-content: center;
+  }
+  .box-1{
+    justify-content: center;
+  }
+  .box-2{
+
+  }
+  .box-3{
+    justify-content:center;
+  }
 }
 
-.foot-3{
-  justify-content: flex-end;
-  align-content: flex-end;.
+@media screen and (width<742px){
+  .footer-flex{
+    justify-content: flex-end;
+  }
+ 
 }
+*/
+
+/* MEDIA QUERIES
+
+wisth>1200PX
+justify content : flex-start
+
+742<width<1200
+justify content : center
+
+w<742
+box3 : justif center : flex end
