@@ -27,10 +27,6 @@ section header {
   justify-content: flex-end;
 }
 
-section header svg {
-  font-size: 1rem;
-}
-
 section header ul {
   display: flex;
   justify-content: center;
@@ -50,11 +46,11 @@ header ul li a {
 }
 
 .rond {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items:center;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid white;
@@ -63,19 +59,21 @@ header ul li a {
 
 .picto-app:hover:after, .picto-app:focus:after{
   content: attr(aria-label);
-  bottom: -1.8em;
-  right: 40px;
+  position: absolute;
+  top: 100px;
+  right: 50px;
   white-space: nowrap;
   background: #1b1a17;
   color: #eff0f0;
   border-radius: 4px;
   padding: 5px 5px;
+  z-index: 1;
 }
 
 .picto-google:hover:after, .picto-google:focus:after{
   content: attr(aria-label);
   position: absolute;
-  bottom: -1.8em;
+  top: 100px;
   right: 10px;
   white-space: nowrap;
   background: #1b1a17;
@@ -155,33 +153,26 @@ i{
   padding-bottom: 5px;
 }
 
-
 .boutons {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.boutons2 {
-  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 20px;
 
 }
 
-.boutons2 a{
+.boutons a{
   text-decoration: none;
   color: #3c4043;
 }
 
-.boutons2 div{
+.boutons div{
   margin: 10px;
   padding: 0 16px;
 }
 
-.boutons2 div:hover{
+.boutons div:hover{
   border: 1px solid #d6d4d4;
   background-color: rgba(60,64,67,0.08) ;
   box-shadow: 0 2px 3px -1px #d6d4d4;
@@ -258,7 +249,21 @@ hr{
   }
 }
 
-/*
+/* BROUILLON
+
+wisth>1200PX
+justify content : flex-start
+
+742<width<1200
+justify content : center
+
+w<742
+box3 : justif center : flex end
+
+
+
+/* MEDIA QUERIES
+
 @media screen and (width<1200px){
   .footer-flex{
     justify-content: center;
@@ -282,13 +287,5 @@ hr{
 }
 */
 
-/* MEDIA QUERIES
 
-wisth>1200PX
-justify content : flex-start
 
-742<width<1200
-justify content : center
-
-w<742
-box3 : justif center : flex end
